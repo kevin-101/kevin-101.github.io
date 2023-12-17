@@ -1,12 +1,24 @@
-import Image from "next/image";
+"use client";
+
+import Intro from "@/components/Intro";
+import About from "@/components/About";
+import Projects from "@/components/Projects";
+import { useEffect } from "react";
 
 export default function Home() {
+  // smooth scrolling
+  useEffect(() => {
+    (async () => {
+      const LocomotiveScroll = (await import("locomotive-scroll")).default;
+      const locomotiveScroll = new LocomotiveScroll();
+    })();
+  }, []);
+
   return (
-    <main className="mx-4 md:mx-10 lg:mx-20 flex flex-col items-center">
-      <section id="about">
-        <h1>Hello, I'm Kevin</h1>
-        <h2>I'm a Web Developer</h2>
-      </section>
+    <main className="mt-72 mb-28 mx-[2vw] md:mx-[10vw] lg:mx-[18vw] flex flex-col items-center">
+      <Intro />
+      <About />
+      <Projects />
     </main>
   );
 }
