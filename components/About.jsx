@@ -16,7 +16,7 @@ function About() {
           start: "0px bottom",
           end: "bottom+=50px bottom",
           scrub: true,
-          markers: true,
+          // markers: true,
         },
         x: "-500px",
         opacity: "0",
