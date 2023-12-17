@@ -29,7 +29,7 @@ function About() {
     <section
       ref={about}
       id="about"
-      className="flex flex-col relative items-center text-center pb-8 mt-48"
+      className="flex flex-col relative items-center text-center pb-8 mt-56"
     >
       <h1 className="text-5xl mb-8">About Me</h1>
       <p className="md:px-20 text-3xl">
