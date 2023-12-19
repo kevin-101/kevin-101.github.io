@@ -15,7 +15,7 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="mt-72 mb-28 mx-[2vw] md:mx-[10vw] lg:mx-[18vw] flex flex-col items-center">
+    <main className="pt-60 md:pt-72 pb-28 overflow-x-hidden px-[0vw] md:px-[10vw] lg:px-[18vw] flex flex-col items-center">
       <Intro />
       <About />
       <Projects />
