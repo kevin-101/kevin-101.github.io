@@ -1,8 +1,23 @@
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 function Projects() {
+  useGSAP(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.from("#projects *", {
+      scrollTrigger: "#projects p",
+      opacity: 0,
+      x: "300px",
+      ease: "power4.out",
+      stagger: 0.1,
+    });
+  }, []);
   return (
     <section
-      id="about"
-      className="flex flex-col items-center text-center pb-8 mt-80"
+      id="projects"
+      className="flex flex-col min-h-screen justify-center items-center text-center py-20"
     >
       <h1 className="text-lg mb-8">Projects</h1>
       <p>

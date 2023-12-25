@@ -31,7 +31,7 @@ function Navbar() {
         color: "#ECE3CE",
       });
 
-      // hamburber icon color
+      // hamburger icon color
       gsap.to(".menu-icon div", { borderColor: "#ECE3CE" });
 
       gsap.to(mobileNav.current, {
@@ -61,7 +61,7 @@ function Navbar() {
         color: "#3A4D39",
       });
 
-      // hamburber icon color
+      // hamburger icon color
       gsap.to(".menu-icon div", { borderColor: "#3A4D39" });
       gsap.to(mobileNav.current, {
         clipPath: "circle(150% at 100% 0%)",
@@ -93,15 +93,25 @@ function Navbar() {
         className="z-30 w-full fixed top-0 py-4 px-8 md:px-10 lg:px-20 text-2xl bg-[rgba(255, 255, 255, .1)] backdrop-blur border-b-white border-b-2 overflow-hidden"
       >
         <div className="flex justify-between items-center">
-          <div className="">
+          <div className="" data-scroll-to data-scroll-to-href="top">
             <Link href="/">Kevin K</Link>
           </div>
           <div className="hidden md:flex ">
             <ul className="flex justify-between">
-              <li className="mr-8">
+              <li
+                className="mr-8"
+                data-scroll-to
+                data-scroll-to-offset="-80"
+                data-scroll-to-href="#about"
+              >
                 <Link href="#about">About</Link>
               </li>
-              <li className="">
+              <li
+                className=""
+                data-scroll-to
+                data-scroll-to-offset="-80"
+                data-scroll-to-href="#projects"
+              >
                 <Link href="#projects">Projects</Link>
               </li>
             </ul>

@@ -10,12 +10,12 @@ export default function Home() {
   useEffect(() => {
     (async () => {
       const LocomotiveScroll = (await import("locomotive-scroll")).default;
-      const locomotiveScroll = new LocomotiveScroll();
+      new LocomotiveScroll();
     })();
   }, []);
 
   return (
-    <main className="pt-60 md:pt-72 pb-28 overflow-x-hidden px-[0vw] md:px-[10vw] lg:px-[18vw] flex flex-col items-center">
+    <main className=" pb-28 overflow-x-hidden px-[0vw] md:px-[10vw] lg:px-[18vw] flex flex-col items-center justify-center">
       <Intro />
       <About />
       <Projects />

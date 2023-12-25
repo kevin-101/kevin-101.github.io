@@ -8,18 +8,32 @@ function About() {
 
   useGSAP(
     () => {
+      const animDuration = 2;
       gsap.registerPlugin(ScrollTrigger);
 
-      gsap.from(about.current, {
-        scrollTrigger: {
-          trigger: about.current,
-          start: "0px bottom",
-          end: "bottom+=50px bottom",
-          scrub: true,
-          // markers: true,
-        },
-        x: "-500px",
-        opacity: "0",
+      // gsap.from("#about h1", {
+      //   scrollTrigger: "#about h1",
+      //   opacity: 0,
+      //   x: "100px",
+      //   duration: animDuration,
+      //   ease: "power4.out",
+      // });
+
+      // gsap.from("#about p", {
+      //   scrollTrigger: "#about p",
+      //   x: "-100px",
+      //   duration: animDuration,
+      //   opacity: "0",
+      //   ease: "power4.out",
+      // });
+
+      gsap.from("#about *", {
+        scrollTrigger: "#about",
+        opacity: 0,
+        x: "300px",
+        duration: animDuration,
+        ease: "power4.out",
+        stagger: 0.2,
       });
     },
     { scope: about.current }
@@ -29,7 +43,7 @@ function About() {
     <section
       ref={about}
       id="about"
-      className="flex flex-col relative items-center text-center pb-8 mt-56"
+      className="flex flex-col min-h-screen justify-center relative items-center text-center"
     >
       <h1 className="text-5xl mb-8">About Me</h1>
       <p className="md:px-20 text-3xl">

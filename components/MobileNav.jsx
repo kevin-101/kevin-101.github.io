@@ -9,8 +9,22 @@ function MobileNav({}, ref) {
       style={{ clipPath: "circle(0% at 100% 0%)" }}
     >
       <div className="flex flex-col gap-10 text-5xl">
-        <Link href={"#about"}>About</Link>
-        <Link href={"#projects"}>Projects</Link>
+        <a
+          href={"#about"}
+          data-scroll-to
+          data-scroll-to-offset="-80"
+          data-scroll-to-href="#about"
+        >
+          About
+        </a>
+        <a
+          href={"#projects"}
+          data-scroll-to
+          data-scroll-to-offset="-80"
+          data-scroll-to-href="#projects"
+        >
+          Projects
+        </a>
       </div>
     </nav>
   );

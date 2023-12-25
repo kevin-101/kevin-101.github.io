@@ -10,14 +10,16 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
+    --text-color: #ece3ce;
+    --text-shadow: #739072;
     --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
+    --background: #3a4d39;
     --background-end-rgb: 0, 0, 0;
   }
 }
 
 body {
-  text-shadow: #739072 0px 2px;
-  color: #ece3ce;
-  background: #3a4d39;
+  text-shadow: var(--text-shadow) 0px 2px;
+  color: var(--text-color);
+  background: var(--background);
 }
